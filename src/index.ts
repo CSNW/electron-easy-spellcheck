@@ -4,20 +4,20 @@ import * as EventEmitter from 'events';
 let debounced: NodeJS.Timer;
 
 interface CachedWord {
-  isMisspelled: boolean;
-  corrections: string[];
+  isMisspelled?: boolean;
+  corrections?: string[];
 }
 
 class SpellChecker extends EventEmitter {
 
-  private lookup: CachedWord[] = [];
+  private lookup: CachedWord = {};
 
   constructor(private cacheTTL = 10000) {
     super();
   }
 
   private clearCache(): void {
-    this.lookup = [];
+    this.lookup = {};
   }
 
   private getCurrentWord(): string {
