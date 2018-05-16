@@ -1,6 +1,6 @@
 {
   "name": "electron-easy-spellcheck",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Yet another spellcheck library for electron",
   "main": "lib/index.js",
   "scripts": {
